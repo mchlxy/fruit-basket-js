@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Basket</title>
+</head>
+<body>
+    <style>
+        * {
+            font-family: monospace;
+        }
+        .card {
+            max-width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-right: 30px;
+            margin-top: 100px;
+        }
+
+        .fruit {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px 0px 18px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        .input-field {
+            margin-right: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 12px;
+            width: 60%;
+            background-color: #fff;
+        }
+
+        .quantity-field {
+            margin-right: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 12px;
+            width: 30%;
+        }
+
+        .total-count {
+            background-color: darkslateblue;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px 5px 10px;
+            border-radius: 3px;
+        }
+
+        .add-btn {
+            border: none;
+            background: none;
+            color: black;
+            font-size: 15pt;
+        }
+
+        .del-btn {
+            background: none;
+            border: none;
+            font-size: 14pt;
+        }
+    </style>
+
+    <div style="display: flex; justify-content: center;">
+        <div class="card" id="card-1">
+        <h2>Basket A <span class="total-count">0</span></h2>
+        <div class="fruit-list"></div>
+        <form>
+            <input type="text" class="input-field" name="fruitName" placeholder="Name" />
+            <input
+            type="number"
+            class="quantity-field"
+            name="fruitQuantity"
+            placeholder="Qty"
+            />
+            <button type="button" class="add-btn" onclick="addFruit('card-1')">+</button>
+        </form>
+        </div>
+    
+        <div class="card" id="card-2">
+        <h2>Basket B <span class="total-count">0</span></h2>
+        <div class="fruit-list"></div>
+        <form>
+            <input type="text" class="input-field" name="fruitName" placeholder="Name" />
+            <input type="number" class="quantity-field" name="fruitQuantity" placeholder="Qty" />
+            <button type="button" onclick="addFruit('card-2')">+</button>
+        </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
