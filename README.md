@@ -3,4 +3,4 @@ A simple school activity to create two baskets containing a list of fruits. Each
 
 Test it here : https://fruit-baskets.netlify.app
 
-![Local Image](screenhot.PNG)
+![Local Image](screenshot.PNG)
